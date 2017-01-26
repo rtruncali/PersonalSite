@@ -1,10 +1,20 @@
-﻿<!DOCTYPE html>
-<html>
+﻿
+
+<!DOCTYPE html><!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+ <!--<![endif]-->
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
+    <title>Rick Truncali - @ViewBag.Title</title>
+        @Styles.Render("~/Content/css")
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
@@ -16,13 +26,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <a class="navbar-brand" href="@Url.Action("Index", "Home", new { area = "" }, null)">
+                    <img src="@Url.Content("~/Images/rick_and_corgi.jpg")" alt="Rick Truncali" class="logoimg" />
+                </a>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            <div class="nav-wrap navbar-collapse collapse">
+                <ul id="nav-desktop" class="navbar-nav">
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "current_page_item" : "")">@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "About" ? "current_page_item" : "")">@Html.ActionLink("About", "About", "Home")</li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Contact" ? "current_page_item" : "")">@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Resume", "GetPdf", "Home", new { target = "_blank" })</li>
+                        
                 </ul>
             </div>
         </div>
@@ -31,7 +45,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Rick Truncali</p>
         </footer>
     </div>
 

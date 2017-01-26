@@ -1,4 +1,116 @@
-﻿body {
+﻿$color-global-green: #2abd54;
+$color-global-red: #bd2a38;
+$color-global-blue: #4891dc;
+$color-global-yellow: #f2f226;
+$color-global-grey-blue: #ecf0f1;
+$color-global-white: #fff;
+
+$color-primary: $color-global-blue;
+$color-accent-one: $color-global-red;
+$color-background-primary: $color-global-white;
+$color-background-accent: $color-global-red;
+$link-color: #2470bb;
+
+$border-color: $color-primary;
+
+$heading-base-color: #3b3b3b;
+$heading-font-weight: 300;
+$heading-one-font-size: 29px;
+$heading-two-font-size: 26px;
+$heading-three-font-size: 22px;
+
+$font-base-color: #3b3b3b;
+$font-accent-base-color: $color-global-white;
+$font-lighter-base-color: #636267;
+$font-base-family: 'Open Sans', Arial, Helvetica, sans-serif;
+$font-light-weight: 300;
+
+$media-query-medium: 991px;
+$media-query-small: 767px;
+$media-query-mobile: 600px;
+
+// Mixins
+
+@mixin standard-button() {
+    display: inline-block;
+    padding: 7px 20px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 14px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    text-decoration: none;
+    background-color: #efefef;
+    color: #333;
+}
+
+.logoimg
+{
+    height: 50px;
+    border-radius: 50%;
+
+}
+
+@media (min-width: $media-query-mobile) {
+
+    #nav-desktop { 
+	    margin: 0 auto; 
+	    list-style: none; 
+	    position: relative; 
+	    width: 960px; 
+        li { 
+	        display: inline-block;	
+        }
+        a { 
+	        color: #bbb; 
+	        font-size: 14px; 
+	        float: left;
+	        padding: 6px 10px 4px 10px;
+	        text-decoration: none;
+	        text-transform: uppercase;
+        }
+        a:hover { 
+	        color: white; 
+        }
+    }
+
+    #magic-line { 
+	    position: absolute;
+	    bottom: -2px; 
+	    left: 0; 
+	    width: 100px; 
+	    height: 2px; 
+	    background: #fe4902;
+    }
+    .current_page_item a { 
+	    color: white !important; 
+    }
+    .ie6 {
+        #nav-desktop li, .ie7 #nav-desktop li { 
+	        display: inline; 
+        }
+        #magic-line {
+	        bottom: -3px;
+        }
+    }
+
+}
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 }

@@ -1,4 +1,39 @@
-﻿body {
+﻿.logoimg {
+  height: 50px;
+  border-radius: 50%; }
+
+@media (min-width: 600px) {
+  #nav-desktop {
+    margin: 0 auto;
+    list-style: none;
+    position: relative;
+    width: 960px; }
+    #nav-desktop li {
+      display: inline-block; }
+    #nav-desktop a {
+      color: #bbb;
+      font-size: 14px;
+      float: left;
+      padding: 6px 10px 4px 10px;
+      text-decoration: none;
+      text-transform: uppercase; }
+    #nav-desktop a:hover {
+      color: white; }
+  #magic-line {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100px;
+    height: 2px;
+    background: #fe4902; }
+  .current_page_item a {
+    color: white !important; }
+  .ie6 #nav-desktop li, .ie6 .ie7 #nav-desktop li {
+    display: inline; }
+  .ie6 #magic-line {
+    bottom: -3px; } }
+
+body {
   padding-top: 50px;
   padding-bottom: 20px; }
 

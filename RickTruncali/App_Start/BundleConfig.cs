@@ -20,6 +20,7 @@ namespace RickTruncali
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+                      "~/Scripts/js.min.js",
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
