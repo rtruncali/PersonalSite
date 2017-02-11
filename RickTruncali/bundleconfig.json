@@ -4,5 +4,17 @@
     "inputFiles": [
       "Scripts/js.js"
     ]
+  },
+  {
+    "outputFileName": "Scripts/parallax.min.js",
+    "inputFiles": [
+      "Scripts/parallax.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/ZergRush.min.js",
+    "inputFiles": [
+      "Scripts/ZergRush.js"
+    ]
   }
 ]

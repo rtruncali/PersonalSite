@@ -1,17 +1,22 @@
 ﻿@{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "Contact Me";
+    ViewBag.Message = "Current Contact information";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<h2>@ViewBag.Title</h2>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<div class="contact-container">
+    
+    <h3>@ViewBag.Message</h3>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+    <address>
+        <strong>Living:</strong> Oakland, CA 94607<br />
+        <strong>Working:</strong> San Francisco, CA 94103<br />
+    </address>
+
+    <address>
+        <strong>Phone:</strong>
+        <a href="tel:18609190413">(860) 919-0413</a><br />
+        <strong>E-mail:</strong>   <a href="mailto:rtruncali@gmail.com">rtruncali@gmail.com</a><br />
+        <strong>LinkedIn:</strong>   <a href="https://www.linkedin.com/in/richard-truncali-46069128">Richard Truncali</a>
+    </address>
+</div>
