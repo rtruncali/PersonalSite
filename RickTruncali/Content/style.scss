@@ -136,14 +136,65 @@ $media-query-mobile: 600px;
  * --------------------------------------------- */
 
 .logoimg {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.navbar-brand {
+    /*display: table;
+    float: none;
+    margin: 0 auto;
+    padding: 5px 0;*/
+        float: left;
+    margin-left: 15px;
+    padding: 9px 10px;
+    position: relative;
+}
+
+#magic-line {
+    display: none;
+}
+.navbar-nav {
+        padding: 0;
+        li {
+            a {
+                display: inline-block;
+                height: 100%;
+                line-height: 20px;
+                padding-bottom: 10px;
+                padding-top: 10px;
+                width: 100%;
+                text-align: center;
+            }
+        }
+}
+#nav-desktop {
+    li {
+        list-style: outside none none;
+
+        a {
+            font-family: $font-nav,Lucida Console;
+            color: #bbb;
+            font-size: 27px;
+            text-decoration: none;
+            text-transform: uppercase;
+
+        }
+        }
+
+    .current_page_item a {
+        color: $color-global-white !important;
+    }
+}
+@media (min-width: $media-query-mobile) {
+    
+.navbar-nav {
+    overflow-y: inherit;
+}
+.logoimg {
 	height: 50px;
 	border-radius: 50%;
 }
-.navbar-brand {
-	padding: 5px 0;
-}
-@media (min-width: $media-query-mobile) {
-
 	#nav-desktop { 
 		list-style: none; 
 		position: relative;
@@ -153,13 +204,13 @@ $media-query-mobile: 600px;
 			margin-right: 10px;
 		}
 		a { 
-			font-family:$font-nav,Lucida Console;
-			color: #bbb;
 			float: left;
-			font-size: 27px;
 			padding: 6px 0px 8px 4px;
-			text-decoration: none;
-			text-transform: uppercase;
+    font-family: $font-nav,Lucida Console;
+    color: #bbb;
+    font-size: 27px;
+    text-decoration: none;
+    text-transform: uppercase;
 		}
 		a:hover { 
 			color: $color-global-white; 
@@ -167,15 +218,12 @@ $media-query-mobile: 600px;
 	}
 
 	#magic-line { 
-		position: absolute;
+		position: absolute !important;
 		bottom: -2px; 
 		left: 0; 
 		width: 100px; 
 		height: 2px; 
 		background: #fe4902;
-	}
-	.current_page_item a { 
-		color: $color-global-white !important; 
 	}
 	.ie6 {
 		#nav-desktop li, .ie7 #nav-desktop li { 
@@ -196,11 +244,11 @@ body {
 }
 
 /* Set padding to keep content from hitting the edges */
-.body-content {
+/*.body-content {
 	padding-left: 15px;
 	padding-right: 15px;
 	width: 960px;
-}
+}*/
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
@@ -555,7 +603,7 @@ $circleSize:50;
 /* -----------------------------------------------
  * Showcase
  * --------------------------------------------- */
-.show-case{
+/*.show-case{
     overflow:hidden;
   white-space: nowrap;
 }
@@ -659,6 +707,13 @@ $circleSize:50;
 }
 
 
+*/
+
+
+
+/* -----------------------------------------------
+ * Warning Button
+ * --------------------------------------------- */
 
 
 
@@ -671,9 +726,6 @@ $circleSize:50;
     margin-bottom: 0;
   }
 }
-
-
-
 .clicker {
     background-color: white;
     outline: none;
