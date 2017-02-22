@@ -26,5 +26,10 @@ namespace RickTruncali.Controllers
 
             return View();
         }
+        [HttpGet]
+        public FileResult GetPdf()
+        {
+            return File("~\\Files\\Rick_Truncali_CV.pdf", "application/pdf");
+        }
     }
 }

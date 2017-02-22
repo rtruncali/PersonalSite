@@ -166,10 +166,14 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\style.scss" />
+    <None Include="bundleconfig.json" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
+    <Content Include="fonts\talldeco-webfont.woff" />
+    <Content Include="fonts\talldeco-webfont.woff2" />
+    <Content Include="fonts\TALLDECO.TTF" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -178,9 +182,27 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\js.js" />
+    <Content Include="Scripts\js.min.js">
+      <DependentUpon>js.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\parallax.es5.js">
+      <DependentUpon>parallax.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\parallax.es5.min.js">
+      <DependentUpon>parallax.es5.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\parallax.js" />
+    <Content Include="Scripts\parallax.min.js">
+      <DependentUpon>parallax.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\ZergRush.js" />
+    <Content Include="Scripts\ZergRush.min.js">
+      <DependentUpon>ZergRush.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -199,6 +221,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Files\" />
+    <Folder Include="Images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
